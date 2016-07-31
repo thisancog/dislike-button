@@ -22,14 +22,6 @@
 	width: 200px;
 }
 
-#dislike-button-tabs input[type="text"].short {
-	width: 50px;
-}
-
-#dislike-button-tabs ol {
-	margin-top: 0;
-}
-
 #dislike-button-tabs .notice, div.error, div.updated {
 	margin: 0 0 30px;
 }
@@ -97,7 +89,11 @@ h2.dislike-button-h2 {
 	outline: 0;
 }
 
-#dislike-button-menu li a, #dislike-button-menu li a:link, #dislike-button-menu li a:visited, #dislike-button-menu li a:active, #dislike-button-menu li a:focus {
+#dislike-button-menu li a,
+#dislike-button-menu li a:link,
+#dislike-button-menu li a:visited,
+#dislike-button-menu li a:active,
+#dislike-button-menu li a:focus {
 	float: left;
 	padding: 0.5em 1em;
 	color: #222222;
@@ -119,20 +115,6 @@ h2.dislike-button-h2 {
 
 #dislike-button-tabs .panel.active-tab {
 	display: block;
-}
-
-label.column {
-	display: inline-block;
-	width: 150px;
-	margin-right: 20px;
-}
-
-#dislike-button-tabs td.show {
-	display: table-cell;
-}
-
-#dislike-button-tabs .hide {
-	display: none;
 }
 
 #dislike-button-tabs textarea {
