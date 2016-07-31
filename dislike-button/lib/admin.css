@@ -1,0 +1,142 @@
+/*******************************
+	General options
+ *******************************/
+
+#dislike-button-tabs table {
+	border: none;
+}
+
+#dislike-button-tabs tr {
+	vertical-align: top;
+}
+
+#dislike-button-tabs td, #dislike-button-tabs th {
+	padding: 10px 10px 5px 0px;
+}
+
+#dislike-button-tabs tr td:first-child {
+	padding-right: 25px;
+}
+
+#dislike-button-tabs input[type="text"] {
+	width: 200px;
+}
+
+#dislike-button-tabs input[type="text"].short {
+	width: 50px;
+}
+
+#dislike-button-tabs ol {
+	margin-top: 0;
+}
+
+#dislike-button-tabs .notice, div.error, div.updated {
+	margin: 0 0 30px;
+}
+
+
+/*******************************
+	Tabs
+ *******************************/
+
+h2.dislike-button-h2 {
+	margin: 1.5em 0 1.5em 0px;
+}
+
+#dislike-button-tabs {
+	border-radius: 4px;
+	position: relative;
+	padding: 0 20px 0 0;
+}
+
+#dislike-button-menu {
+	margin: 0;
+	padding: 0.2em 0.2em 0;
+	min-height: 0;
+	color: #222222;
+}
+
+#dislike-button-menu:before, #dislike-button-menu:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+
+#dislike-button-menu:after {
+	clear: both;
+}
+
+#dislike-button-menu li {
+	position: relative;
+	top: 0;
+	float: left;
+	margin: 1px 0.2em 0 0;
+	padding: 0;
+	white-space: nowrap;
+	list-style: none;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border: 1px solid #DDD;
+	background: #E6E6E6;
+	color: #AAA;
+}
+
+#dislike-button-menu #submitli {
+	margin: 1px 0 0 30px;
+}
+
+#dislike-button-menu li.active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+	border: 1px solid #AAA;
+	color: #000;
+	outline: 0;
+}
+
+#dislike-button-menu li:focus {
+	outline: 0;
+}
+
+#dislike-button-menu li a, #dislike-button-menu li a:link, #dislike-button-menu li a:visited, #dislike-button-menu li a:active, #dislike-button-menu li a:focus {
+	float: left;
+	padding: 0.5em 1em;
+	color: #222222;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+#dislike-button-menu li a:hover {
+	color: #000000;
+}
+
+#dislike-button-tabs .panel, #dislike-button-tabs .panel {
+	display: none;
+	padding: 1em 1.4em;
+	border: 1px solid #aaaaaa;
+	color: #222222;
+	background: none;
+}
+
+#dislike-button-tabs .panel.active-tab {
+	display: block;
+}
+
+label.column {
+	display: inline-block;
+	width: 150px;
+	margin-right: 20px;
+}
+
+#dislike-button-tabs td.show {
+	display: table-cell;
+}
+
+#dislike-button-tabs .hide {
+	display: none;
+}
+
+#dislike-button-tabs textarea {
+	width: 100%;
+	min-height: 100px;
+	resize: vertical;
+}
