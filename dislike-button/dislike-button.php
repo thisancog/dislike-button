@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Dislike Button
-Plugin URI: https://github.com/thisancog
+Plugin URI: https://github.com/thisancog/dislike-button
 Description: A plugin for more honest reader evaluation.
 Author: Matthias Planitzer
 */
