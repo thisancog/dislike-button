@@ -2,19 +2,19 @@
 	display: flex;
 	justify-content: center;
 	padding: 2px 4px;
-	height: 17px;
-	border-radius: 5px;
+	height: 16px;
+	border-radius: 3px;
 	color: #FFFFFF;
 	
 	cursor: pointer;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
-	line-height: 17px;
+	line-height: 16px;
 }
 
 .dislike-button .dislike-button-icon {
-	width: 17px;
-	height: 17px;
+	width: 16px;
+	height: 16px;
 	margin-right: 5px;
 }
 
