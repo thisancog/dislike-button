@@ -36,7 +36,8 @@ jQuery(document).ready(function() {
 			var data = {
 				'action':	'update_dislike_button',
 				'id':		jQuery(this).attr('id').substr(15),
-				'query':	(jQuery(this).hasClass('default')) ? 'dislike' : 'undo'
+				'query':	(jQuery(this).hasClass('default')) ? 'dislike' : 'undo',
+				'state': 	"update" 
 			}, elem = this;
 	
 			jQuery.post(dislike_ajax_url, data, function(response) {
