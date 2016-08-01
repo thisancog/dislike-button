@@ -233,7 +233,7 @@ function update_dislike_button() {
 	global $wpdb;
 	$id = intval($_POST['id']);
 	$query = $_POST['query'];
-	$cookie = esc_attr($_POST['cookie']);
+	$cookie = (isset($_POST['cookie'])) ? esc_attr($_POST['cookie']) : '';
 	$state = 'default';
 	$count = get_dislike_count($id);
 
