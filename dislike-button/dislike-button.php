@@ -205,7 +205,7 @@ function dislike_button() {
 	$count = get_dislike_count($id);
 	$o = get_option('dislike_options');
 
-	$state = (isset($_COOKIE['dislike-' . $id])) ? $_COOKIE['dislike-' . $id] : 'default';
+	$state = (isset($_COOKIE['dislike-' . $id]) && ('' != $_COOKIE['dislike-' . $id])) ? $_COOKIE['dislike-' . $id] : 'default';
 
 	echo 	'<div class="dislike-button ' . $state . '" id="dislike-button-' . $id . '">
 				<div class="dislike-button-icon"></div>
