@@ -1,7 +1,3 @@
-/*******************************
-	General options
- *******************************/
-
 #dislike-button-tabs table {
 	border: none;
 }
@@ -26,12 +22,7 @@
 	margin: 0 0 30px;
 }
 
-
-/*******************************
-	Tabs
- *******************************/
-
-h2.dislike-button-h2 {
+.dislike-button-h2 {
 	margin: 1.5em 0 1.5em 0px;
 }
 
