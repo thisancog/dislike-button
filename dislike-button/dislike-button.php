@@ -137,14 +137,14 @@ function dislike_settings() {
 					<td><input type="text id="colorbefore" name="colorbefore" class="colorpicker" value="<?php echo $o['colorbefore']; ?>"></td>
 					</tr>
 					<tr><td><label for="textbefore"><?php _e('Text:', 'dislike-2016'); ?></label></td>
-					<td><input type="text" value="<?php echo esc_attr($o['textbefore']); ?>" placeholder="<?php _e('Dislike', 'dislike-2016'); ?>" /></td>
+					<td><input type="text" name="textbefore" value="<?php echo esc_attr($o['textbefore']); ?>" placeholder="<?php _e('Dislike', 'dislike-2016'); ?>" /></td>
 				</tr>
 				<tr>
 					<td rowspan="2"><?php _e('After dislike:', 'dislike-2016'); ?></td>
 					<td><label for="colorafter"><?php _e('Color:', 'dislike-2016'); ?></label></td>
 					<td><input type="text id="colorafter" name="colorafter" class="colorpicker" value="<?php echo $o['colorafter']; ?>"></td></tr>
 					<tr><td><label for="textafter"><?php _e('Text:', 'dislike-2016'); ?></label></td>
-					<td><input type="text" value="<?php echo esc_attr($o['textafter']); ?>" placeholder="<?php _e('Disliked', 'dislike-2016'); ?>" /></td>
+					<td><input type="text" name="textafter" value="<?php echo esc_attr($o['textafter']); ?>" placeholder="<?php _e('Disliked', 'dislike-2016'); ?>" /></td>
 				</tr>
 				<tr>
 					<td><label for="customcss"><?php _e('Custom CSS:', 'dislike-2016'); ?></label></td>
@@ -224,7 +224,9 @@ function dislike_helper_header() {
 		<?php echo $o['customcss']; ?>
 	</style>
 	<script type="text/javascript" src="<?php echo plugins_url('lib/dislike-button.js', __FILE__); ?>"></script>
-	<script type="text/javascript"> var ajax_url = '<?php echo admin_url('admin-ajax.php'); ?>';</script>
+	<script type="text/javascript"> var dislike_ajax_url = '<?php echo admin_url('admin-ajax.php'); ?>';
+									var dislike_default = '<?php echo $o['textbefore']; ?>';
+									var dislike_active = '<?php echo $o['textafter']; ?>' ;</script>
 <?php }
 
 
