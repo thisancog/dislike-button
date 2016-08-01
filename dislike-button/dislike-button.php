@@ -29,6 +29,7 @@ add_action('admin_init', 'dislike_admin_init');
 add_action('admin_menu', 'dislike_setup_theme_admin_menu');
 add_action('plugins_loaded', 'dislike_helper_load_textdomain');
 add_action('wp_ajax_update_dislike_button', 'update_dislike_button');
+add_action('wp_ajax_nopriv_update_dislike_button', 'update_dislike_button');
 add_action('wp_head', 'dislike_helper_header');
 
 function dislike_helper_load_textdomain() {
@@ -205,7 +206,7 @@ function dislike_button() {
 	$count = get_dislike_count($id);
 	$o = get_option('dislike_options');
 
-	$state = (isset($_COOKIE['dislike-' . $id]) && ('' != $_COOKIE['dislike-' . $id])) ? $_COOKIE['dislike-' . $id] : 'default';
+	$state = (isset($_COOKIE['dislike-' . $id]) && (null != $_COOKIE['dislike-' . $id])) ? $_COOKIE['dislike-' . $id] : 'default';
 
 	echo 	'<div class="dislike-button ' . $state . '" id="dislike-button-' . $id . '">
 				<div class="dislike-button-icon"></div>
@@ -233,7 +234,7 @@ function update_dislike_button() {
 	global $wpdb;
 	$id = intval($_POST['id']);
 	$query = $_POST['query'];
-	$cookie = (isset($_POST['cookie'])) ? esc_attr($_POST['cookie']) : '';
+	$cookie = (isset($_POST['cookie']) && !empty($_POST['cookie'])) ? esc_attr($_POST['cookie']) : '';
 	$state = 'default';
 	$count = get_dislike_count($id);
 
