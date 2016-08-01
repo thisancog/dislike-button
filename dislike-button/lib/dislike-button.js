@@ -50,7 +50,6 @@ function dislike_button_update(elem, data) {
 		type: 'POST',
 		data: data,
 		success: function(response) {
-			console.log('response: ' + response);
 			var state = (response.state) ? response.state : 'default';
 			jQuery(elem).removeClass('default active').addClass(state);
 			jQuery(elem).find('.dislike-button-text').html(eval('dislike_' + state));
