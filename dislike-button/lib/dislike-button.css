@@ -3,11 +3,11 @@
 	justify-content: center;
 	padding: 2px 4px;
 	height: 17px;
-	border-radius: 3px;
+	border-radius: 5px;
 	color: #FFFFFF;
 	
 	cursor: pointer;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
 	line-height: 17px;
 }
