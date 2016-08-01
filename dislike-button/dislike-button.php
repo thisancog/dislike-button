@@ -98,11 +98,11 @@ function dislike_settings() {
 
 	if (isset($_POST["update_settings"])) { 
 		$options = array(
-			'colorbefore'		=> (isset($_POST['colorbefore'])) ? esc_attr($_POST['colorbefore']) : '#FF3131',
-			'colorafter'		=> (isset($_POST['colorafter'])) ? esc_attr($_POST['colorafter']) : '#E52C2B',
-			'textbefore'		=> (isset($_POST['textbefore'])) ? esc_attr($_POST['textbefore']) : __('Dislike', 'dislike-2016'),
-			'textafter'			=> (isset($_POST['textafter'])) ? esc_attr($_POST['textafter']) : __('Disliked', 'dislike-2016'),
-			'customcss'			=> (isset($_POST['customcss'])) ? esc_attr($_POST['customcss']) : '',
+			'colorbefore'		=> (isset($_POST['colorbefore']) && !empty($_POST['colorbefore'])) ? esc_attr($_POST['colorbefore']) : '#FF3131',
+			'colorafter'		=> (isset($_POST['colorafter']) && !empty($_POST['colorafter'])) ? esc_attr($_POST['colorafter']) : '#E52C2B',
+			'textbefore'		=> (isset($_POST['textbefore']) && !empty($_POST['textbefore'])) ? esc_attr($_POST['textbefore']) : __('Dislike', 'dislike-2016'),
+			'textafter'			=> (isset($_POST['textafter']) && !empty($_POST['textafter'])) ? esc_attr($_POST['textafter']) : __('Disliked', 'dislike-2016'),
+			'customcss'			=> (isset($_POST['customcss']) && !empty($_POST['customcss'])) ? esc_attr($_POST['customcss']) : '',
 		);
 		update_option("dislike_options", $options);
 	}
