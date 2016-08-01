@@ -31,12 +31,11 @@ jQuery(document).ready(function() {
 	jQuery('.dislike-button').click(function() {
 		if (!dislike_button_active) {
 			dislike_button_active = true;
-			var query = (jQuery(this).hasClass('default')) ? 'dislike' : 'undo';
 			var data = {
 				'action':	'update_dislike_button',
 				'id':		jQuery(this).attr('id').substr(15),
-				'query':	query,
-				'state': 	"update" 
+				'query': 	(jQuery(this).hasClass('default')) ? 'dislike' : 'undo',
+				'state': 	'update'
 			}, elem = this;
 	
 			dislike_button_update(elem, data);
