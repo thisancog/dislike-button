@@ -1,3 +1,5 @@
+var clicked = false;
+
 jQuery(document).ready(function() {
 	jQuery('.dislike-button').each(function() {
 		var id = jQuery(this).attr('id').substr(15);
@@ -29,15 +31,18 @@ jQuery(document).ready(function() {
 	});
 
 	jQuery('.dislike-button').click(function() {
-		var data = {
-			'action':	'update_dislike_button',
-			'id':		jQuery(this).attr('id').substr(15),
-			'query':	(jQuery(this).hasClass('default')) ? 'dislike' : 'undo'
-		}, elem = this;
+		if (!clicked) {
+			clicked = true;
+			var data = {
+				'action':	'update_dislike_button',
+				'id':		jQuery(this).attr('id').substr(15),
+				'query':	(jQuery(this).hasClass('default')) ? 'dislike' : 'undo'
+			}, elem = this;
 	
-		jQuery.post(dislike_ajax_url, data, function(response) {
-			dislike_button_update(elem, response);			
-		});
+			jQuery.post(dislike_ajax_url, data, function(response) {
+				dislike_button_update(elem, response);			
+			});
+		}
 	});
 });
 
@@ -48,5 +53,6 @@ function dislike_button_update(e, response) {
 	var expiry = new Date();
 	expiry.setTime(expiry.getTime()+(99*365*24*60*60*1000)); 
 	document.cookie = "dislike-" + response.id + "=" + response.state + "; expires=" + expiry.toGMTString();
+	clicked = false;
 }
 
